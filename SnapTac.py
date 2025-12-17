@@ -52,7 +52,7 @@ class LogFileProcessor(wx.Frame):
 				# self.SetMenuBar(menubar)  # 设置菜单栏
 
 				# 选择目录控件
-				dir_box = wx.StaticBoxSizer(wx.VERTICAL, panel, "")
+				dir_box = wx.StaticBoxSizer(wx.VERTICAL, panel, "Board")
 				self.dir_picker = wx.DirPickerCtrl(
 						panel, 
 						message="Select board Path",
@@ -64,7 +64,7 @@ class LogFileProcessor(wx.Frame):
 					text_ctrl.SetHint("Choose a board directory here ...")  # 设置占位符文本
 
 				dir_box.Add(self.dir_picker, flag=wx.EXPAND|wx.ALL, border=5)
-				vbox.Add(dir_box, flag=wx.EXPAND|wx.LEFT|wx.RIGHT, border=10)
+				vbox.Add(dir_box, flag=wx.EXPAND|wx.LEFT|wx.RIGHT|wx.TOP, border=10)
 
 				# 输出格式选择+处理按钮区域
 				hbox = wx.BoxSizer(wx.HORIZONTAL)		# 盒式布局管理器
